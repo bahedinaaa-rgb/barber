@@ -1,0 +1,305 @@
+body {
+    margin: 0; /* Remove default browser margin to eliminate unwanted gaps around the page */
+}
+html {
+    scroll-behavior: smooth;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #5a2257e1;
+}
+.container img{
+    width: 90px;
+    height: 90px;
+    padding-right: 35px;
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+nav .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 35px;
+}
+ ul{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     list-style: none;
+     gap: 40px;
+
+}
+li a{
+    text-decoration:none ;
+    font-size: 18px;
+    color: white;
+
+}
+li a:hover{
+    background-color: #5a2257e1 ;
+    border-radius: 8px;
+    padding-block: 1px 1px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.menu-toggle {
+    display: none; 
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+.container-header{
+    background-image: url(./imges/istockphoto-1124646518-170667a.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position: center;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 100px; /* Use padding to push content down, eliminating the white gap */
+    box-sizing: border-box; /* Include padding in the element's total height */
+}
+.container-header .row h1 {
+    color: #fff;
+    font-size: 80px;
+    text-align: center;
+    border: solid 10px #5a2257e1;
+    padding: 20px;
+    text-decoration: overline;
+}
+.container-header .row p{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-align: center;
+
+}
+.container-header .row p span{
+    color: aliceblue;
+}
+ .btn-primary{
+    color: aliceblue;
+    font-size: 30px;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content ;
+    border: 5px  solid #5a2257e1;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 1.6s ease-in-out;
+
+ }
+ .btn-primary:hover{
+    background-color: #5a2257e1;
+ }
+ .container-menu {
+    background-color: #140113e1;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border:10px solid #5a2257e1 ;
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    text-decoration: overline;
+    text-transform: uppercase;
+    margin-top: 0px;
+    padding-top: 2rem;
+    
+ }
+ .container-menu img{
+    width: 450px;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+ }
+ 
+ #section{
+    margin-top: 0px;
+ }
+
+/* =================
+   Book an Appointment & Contact Sections
+   ================= */
+
+/* General styling for both sections */
+#book-appointment, #contact, #about {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Style for the titles (h2) */
+#book-appointment h2, #contact h2, #about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* About Section Styling */
+#about {
+    background-color: antiquewhite;
+    border-bottom: 5px solid aliceblue;
+}
+
+#about h2 {
+    color: #5a2257e1;
+    text-decoration: overline;
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #5a2257e1;
+}
+
+/* Book an Appointment Section */
+#book-appointment {
+    background-color: #5a2257e1;
+}
+
+#book-appointment h2 {
+    color:#fff;
+}
+
+#book-appointment form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form fields */
+}
+
+#book-appointment form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* To include padding in the width */
+}
+
+/* Assuming .btn-primary is your main button style, let's make sure it's consistent */
+#book-appointment .btn-primary {
+    background-color: #ff9800; /* A nice orange color */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#book-appointment .btn-primary:hover {
+    background-color: #5a2257e1; /* A darker shade on hover */
+}
+
+
+/* Contact Us Section */
+#contact {
+    background-color: #222; /* Dark background */
+    color: #fff;
+}
+
+#contact h2 {
+    color: #fff;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+/* Make the labels (Address, Phone, Email) stand out */
+.contact-info strong {
+    color: brown; /* Use the same primary color */
+    margin-right: 10px;
+}
+
+/* ===================================
+   Responsive Design for Small Screens
+   =================================== */
+
+/* This code applies only when the screen width is 768px or less (tablets and phones) */
+@media screen and (max-width: 768px) {
+
+    /* --- Navigation Bar --- */
+    /* Stack the logo and the links vertically */
+    nav .container {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block; /* Show on mobile */
+    }
+
+    #nav-menu {
+        display: none; /* Hide links by default */
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-menu.active {
+        display: block;
+    }
+
+    /* When the menu is open, stack the links */
+    #nav-menu ul {
+        flex-direction: column;
+        gap: 20px; /* Adjust spacing for vertical layout */
+        padding: 15px 0; /* Add some padding */
+    }
+
+    /* --- Header Section --- */
+    .container-header {
+        /* Adjust padding-top to make space for the taller, stacked navbar */
+        padding-top: 130px;
+        height: auto; /* Let height adjust to content */
+        min-height: 100vh; /* Ensure it fills the screen */
+    }
+
+    .container-header .row h1 {
+        font-size: 45px; /* Reduce title font size */
+        border-width: 7px;
+    }
+
+    .container-header .row p {
+        font-size: 20px; /* Reduce paragraph font size */
+    }
+
+    /* --- Appointment Form --- */
+    #book-appointment form {
+        width: 90%; /* Prevent form from touching screen edges */
+    }
+}
