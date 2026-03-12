@@ -1,35 +1,34 @@
-body {
-    margin: 0; /* Remove default browser margin to eliminate unwanted gaps around the page */
-}
+
 html {
     scroll-behavior: smooth;
 }
 nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #5a2257e1;
+  background-color: #5a2257e1;
+  color: aliceblue;
+  padding: 0 20px;
+  align-items: center;
+  
+  
+}
+/* Global Layout Constraint */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 .container img{
     width: 90px;
     height: 90px;
-    padding-right: 35px;
 }
 nav .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 
 }
-nav .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 35px;
-}
+
+    
+
  ul{
      display: flex;
      justify-content: space-between;
@@ -52,14 +51,15 @@ li a:hover{
     margin-right: auto;
     
 }
+
+/* Hamburger Icon (Hidden on Desktop) */
 .menu-toggle {
-    display: none; 
-    background: transparent;
-    border: none;
-    color: white;
+    display: none;
     font-size: 30px;
     cursor: pointer;
+    color: white;
 }
+
 .container-header{
     background-image: url(./imges/istockphoto-1124646518-170667a.jpg);
     background-size: cover;
@@ -257,49 +257,44 @@ li a:hover{
     /* --- Navigation Bar --- */
     /* Stack the logo and the links vertically */
     nav .container {
-        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .menu-toggle {
         display: block; /* Show on mobile */
+        z-index: 1001;
     }
 
     #nav-menu {
-        display: none; /* Hide links by default */
-        width: 100%;
-        text-align: center;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden off-screen */
+        width: 250px;
+        height: 100vh;
+        background-color: #5a2257;
+        padding-top: 80px;
+        transition: 0.4s ease;
+        z-index: 1000;
     }
-
     #nav-menu.active {
-        display: block;
+        right: 0; /* Slide in */
+        box-shadow: -2px 0 10px rgba(0,0,0,0.5);
     }
 
-    /* When the menu is open, stack the links */
+    /* Stack the navigation links vertically inside sidebar */
     #nav-menu ul {
         flex-direction: column;
-        gap: 20px; /* Adjust spacing for vertical layout */
-        padding: 15px 0; /* Add some padding */
+        align-items: center;
+        gap: 30px; 
     }
-
-    /* --- Header Section --- */
+    
+    #nav-menu ul li a {
+        font-size: 22px;
+        display: block;
+    }
+    
+    /* Adjust Header Padding to not look broken */
     .container-header {
-        /* Adjust padding-top to make space for the taller, stacked navbar */
-        padding-top: 130px;
-        height: auto; /* Let height adjust to content */
-        min-height: 100vh; /* Ensure it fills the screen */
-    }
-
-    .container-header .row h1 {
-        font-size: 45px; /* Reduce title font size */
-        border-width: 7px;
-    }
-
-    .container-header .row p {
-        font-size: 20px; /* Reduce paragraph font size */
-    }
-
-    /* --- Appointment Form --- */
-    #book-appointment form {
-        width: 90%; /* Prevent form from touching screen edges */
+        padding-top: 50px;
     }
 }

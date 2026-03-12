@@ -12,6 +12,7 @@
     <nav>
         <div class="container">
             <img src="./imges/barber-haircut-mascot-png.png" alt="fast-food-logo">
+            <div class="menu-toggle" id="mobile-menu-toggle">&#9776;</div>
             <div class="row" id="nav-menu">
                 <ul>
                   <li><a href="#home">Home</a></li>
@@ -20,10 +21,6 @@
                   <li><a href="#menu">Menu</a></li>
                 </ul>
             </div>
-            <!-- Hamburger Button (only visible on mobile) -->
-            <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu">
-                &#9776; <!-- Hamburger Icon -->
-            </button>
         </div>
     </nav>
     
@@ -81,15 +78,14 @@
         </section>
 
     <script>
-        // Select the button and the menu by their IDs
-        const menuButton = document.getElementById('mobile-menu-toggle');
+        const menuToggle = document.getElementById('mobile-menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
-        // Add a click event listener to the button
-        menuButton.addEventListener('click', () => {
-            // Toggle the .active class on the menu container
-            navMenu.classList.toggle('active');
-        });
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
     </script>
 </body>
 </html>
